@@ -1,0 +1,70 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url('https://i.imgur.com/WC3wrDA.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Estilos de navegación */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de las secciones */
+section {
+  padding: 100px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 60px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+iframe, video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos del botón del contador */
+#contadorBtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#contadorBtn:hover {
+  background-color: #45a049;
+}
