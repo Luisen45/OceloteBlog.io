@@ -1,3 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url('https://i.imgur.com/WC3wrDA.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} 
+
 /* Estilos de navegación */
 nav {
   background-color: rgba(0, 0, 0, 0.7);
