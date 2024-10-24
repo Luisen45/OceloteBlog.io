@@ -1,48 +1,51 @@
 window.onload = function() {
-    // Conexión a la base de datos Firestore
     const db = firebase.firestore();
-    
-    // Referencia al documento "contador" dentro de la colección "visitas"
     const docRef = db.collection('visitas').doc('contador');
 
-    // Obtener el valor del contador desde Firestore
+    // Obtener y mostrar todos los contadores al cargar la página
     docRef.get().then((doc) => {
         if (doc.exists) {
-            // Obtener el valor del campo "contador"
             const data = doc.data();
-            const contador = data.contador;
-            // Mostrar el valor en el elemento con id "contador"
-            document.getElementById("contador").textContent = contador;
+            document.getElementById("contadorMarcos").textContent = data.contadorMarcos || 0;
+            document.getElementById("contadorMiriam").textContent = data.contadorMiriam || 0;
+            document.getElementById("contadorRamon").textContent = data.contadorRamon || 0;
+            document.getElementById("contadorVisitas").textContent = data.contadorVisitas || 0;
         } else {
-            console.log("El documento no existe.");
+            console.log("No se encontró el documento.");
         }
     }).catch((error) => {
         console.log("Error al obtener el documento:", error);
     });
 
-    // Función para incrementar el contador y actualizar Firestore
-    function incrementarContador() {
+    // Funciones para incrementar cada contador
+    function incrementarContador(campo) {
         docRef.get().then((doc) => {
             if (doc.exists) {
-                const data = doc.data();
-                let contador = data.contador;
-                contador++;  // Incrementar el contador
+                let contador = doc.data()[campo] || 0;
+                contador++;
 
-                // Actualizar el valor del contador en Firestore
-                docRef.update({ contador: contador })
+                let updateObj = {};
+                updateObj[campo] = contador;
+
+                // Actualizar el contador correspondiente en Firestore
+                docRef.update(updateObj)
                     .then(() => {
-                        // Actualizar el valor en la página
-                        document.getElementById("contador").textContent = contador;
+                        document.getElementById(campo).textContent = contador;
                     })
                     .catch((error) => {
-                        console.log("Error al actualizar el documento:", error);
+                        console.log("Error al actualizar el contador:", error);
                     });
+            } else {
+                console.log("No se encontró el documento.");
             }
         }).catch((error) => {
             console.log("Error al obtener el documento:", error);
         });
     }
 
-    // Asignar la función al botón de visitas
-    document.getElementById("contadorBtn").addEventListener("click", incrementarContador);
+    // Asignar la función a cada botón
+    document.getElementById("contadorBtnMarcos").addEventListener("click", () => incrementarContador("contadorMarcos"));
+    document.getElementById("contadorBtnMiriam").addEventListener("click", () => incrementarContador("contadorMiriam"));
+    document.getElementById("contadorBtnRamon").addEventListener("click", () => incrementarContador("contadorRamon"));
+    document.getElementById("contadorBtnVisitas").addEventListener("click", () => incrementarContador("contadorVisitas"));
 };
