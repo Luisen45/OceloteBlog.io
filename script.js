@@ -5,7 +5,7 @@ window.onload = function() {
 
     // Si el valor del contador no está en localStorage, lo inicializamos en 434
     if (!contador) {
-        contador = 434;
+        contador = 0;
     } else {
         // Convertimos el valor recuperado en un número
         contador = parseInt(contador, 10);
