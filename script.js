@@ -1,13 +1,13 @@
 window.onload = function() {
     // Firebase Configuración
     const firebaseConfig = {
-      apiKey: "TU_API_KEY",
-      authDomain: "TU_AUTH_DOMAIN",
-      projectId: "TU_PROJECT_ID",
-      storageBucket: "TU_STORAGE_BUCKET",
-      messagingSenderId: "TU_MESSAGING_SENDER_ID",
-      appId: "TU_APP_ID",
-      measurementId: "TU_MEASUREMENT_ID"
+      apiKey: "AIzaSyAuJVV50Vupd9ssREB55G8Jt9fRDL52TQk",
+      authDomain: "contadordevistasweb.firebaseapp.com",
+      projectId: "contadordevistasweb",
+      storageBucket: "contadordevistasweb.appspot.com",
+      messagingSenderId: "205637920442",
+      appId: "1:205637920442:web:e5b2e1339f4deed4134483",
+      measurementId: "G-1XK0HHGGZ2"
     };
 
     // Inicializar Firebase
