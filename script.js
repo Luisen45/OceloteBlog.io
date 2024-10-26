@@ -76,3 +76,21 @@ document.getElementById("contadorBtnMiriam").addEventListener("click", () => inc
 document.getElementById("contadorBtnRamon").addEventListener("click", () => incrementarContador("contadorRamon"));
 document.getElementById("contadorBtnVisitas").addEventListener("click", () => incrementarContador("contadorVisitas"));
           
+// Escuchar el clic en el botón
+document.getElementById('sumarBtn').addEventListener('click', function() {
+    // Obtener los valores ingresados por el usuario
+    const numero1 = parseFloat(document.getElementById('numero1').value);
+    const numero2 = parseFloat(document.getElementById('numero2').value);
+
+    // Verificar si los números son válidos (no están vacíos)
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        // Sumar los dos números
+        const suma = numero1 + numero2;
+        
+        // Mostrar el resultado en el campo "Resultado"
+        document.getElementById('resultado').value = suma;
+    } else {
+        // Mostrar un mensaje si los números no son válidos
+        alert("Por favor, ingresa ambos números.");
+    }
+});
