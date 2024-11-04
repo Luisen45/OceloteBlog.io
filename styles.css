@@ -7,6 +7,10 @@ body {
   background-attachment: fixed;
 } 
 
+/* Estilos específicos para Zaragociencia */
+body.zcomentarios {
+  background-image: url('https://imgur.com/a/KRadkh1.jpg');
+}
 /* Estilos de navegación */
 nav {
   background-color: rgba(0, 0, 0, 0.7);
