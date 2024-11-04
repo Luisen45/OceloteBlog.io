@@ -1,17 +1,22 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-image: url('https://imgur.com/a/KRadkh1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 } 
 
-/* Estilos específicos para Zaragociencia */
+/* Estilos específicos para zcomentarios */
 body.zcomentarios {
-  background-image: url('https://imgur.com/a/KRadkh1.jpg');
+  background-image: url('https://i.imgur.com/imagen_zcomentarios.jpg');
 }
-/* Estilos de navegación */
+
+/* Estilos específicos para xzaragociencia */
+body.xzaragociencia {
+  background-image: url('https://i.imgur.com/imagen_xzaragociencia.jpg');
+}
+
+/* Resto de tus estilos */
 nav {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
