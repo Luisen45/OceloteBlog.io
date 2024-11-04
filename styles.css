@@ -1,10 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  background-image: url('https://imgur.com/WC3wrDA');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-} 
+}
+
 
 /* Estilos específicos para zcomentarios */
 body.zcomentarios {
